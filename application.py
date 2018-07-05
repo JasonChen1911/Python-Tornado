@@ -12,6 +12,7 @@ settings = dict(
     static_path = os.path.join(os.path.dirname(__file__), 'statics'),#静态文件路径
     cookie_secret = cookie_secret_value, #cookie
     xsrf_cookies = True, #开启 XSRF 保护， XSRF即跨站请求伪造
+    login_url = '/',
 )
 
 application = Application(
