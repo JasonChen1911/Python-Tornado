@@ -1,0 +1,22 @@
+body{
+    background-image: url("/static/image/登陆背景.jpeg");
+    background-repeat: no-repeat;
+    font-family: "Microsoft YaHei";
+    overflow-y:hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+form {
+    margin: 150px auto;
+    width: 300px;
+}
+#forget_pwd{
+    float: right;
+    color: white;
+}
+#no_username{
+    float: left;
+    color: white;
+}
