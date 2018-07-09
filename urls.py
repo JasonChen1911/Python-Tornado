@@ -15,7 +15,7 @@ urls = [
     #(r'/', MainHandler, {'title':'百度'}),
     (r'/', IndexHandler),
     (r'/SignIn', SignInHandler),
-    (r'/SignOn', SeeHandler),
+    (r'/SignOn', SignOnHandler),
     (r'/user', UserHandler),
     (r'/sleep', SleepHandler),
     (r'/see', SeeHandler),

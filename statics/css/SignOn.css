@@ -1,0 +1,16 @@
+body{
+    font-family: "Microsoft YaHei";
+    overflow-y:hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+form {
+    margin:10px auto;
+    width: 400px;
+}
+#had_username{
+    float: center;
+    color: black;
+}

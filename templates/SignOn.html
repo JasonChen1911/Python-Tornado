@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>注册界面</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/SignOn.css">
+{% end %}
+{% block body %}
+    <form class="pure-form pure-g" method="POST">
+        <fieldset class="pure-u-1">
+            {% raw xsrf_form_html() %}
+            <h2>欢迎注册</h2>
+            <div class="pure-group pure-input-1">
+                <label>用 户 名</label>
+                <input type="text" class="pure-input-1" placeholder="您的账户名和登录名" id="username">
+            </div>
+            <div class="pure-group pure-input-1">
+                <label>
+                    设 置 密 码<input type="password" class="pure-input-1" placeholder="建议至少使用两种字符组合" id="password1">
+                </label>
+            </div>
+            <div class="pure-group pure-input-1">
+                <label>
+                    重 复 密 码<input type="password" class="pure-input-1" placeholder="请再次输入密码" id="password2">
+                </label>
+            </div>
+            <div class="pure-group pure-input-1">
+                <label>
+                    验 证 邮 箱<input type="text" class="pure-input-1" placeholder="建议使用常用邮箱" id="email">
+                </label>
+            </div>
+            <br>
+            <div class="pure-group pure-input-1">
+                <button type="submit" class="pure-button pure-input-1 pure-button-primary" id="registerbtn"> 注 册 </button>
+            </div>
+            <a id="had_username" href="/SignIn">已有账户？请登录...</a>
+        </fieldset>
+    </form>
+{% end %}
