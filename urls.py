@@ -5,18 +5,18 @@ the url structure of website
 '''
 
 import sys
-from handlers.Main import MainHandler
 from handlers.index import IndexHandler
-from handlers.user import UserHandler
+from handlers.user import *
 from handlers.sleep import *
 from handlers.Sign import *
+from handlers.SignOn import *
 
 urls = [
-    #(r'/', MainHandler, {'title':'百度'}),
     (r'/', IndexHandler),
     (r'/SignIn', SignInHandler),
     (r'/SignOn', SignOnHandler),
     (r'/user', UserHandler),
     (r'/sleep', SleepHandler),
     (r'/see', SeeHandler),
+    (r'/success', SuccessHandler),
 ]

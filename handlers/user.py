@@ -13,3 +13,10 @@ class UserHandler(BaseHandler):
         username = json_decode(self.current_user)
         user_info = mrd.select_table(table="users", column="*", condition="username", value=username)
         self.render("user.html", userinfo = user_info)
+
+
+class SuccessHandler(BaseHandler):
+    @authenticated
+    def get(self):
+        username = json_decode(self.current_user)
+        self.render("success.html", user = username)

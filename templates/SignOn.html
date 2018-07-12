@@ -4,7 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>注册界面</title>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/SignOn.css">
+    <link rel="stylesheet" type="text/css" href="{{static_url("css/SignOn.css")}}">
+    <script type="text/javascript">
+        function inputing(e) {
+            alert("inputing")
+        }
+    </script>
+    <script src="{{static_url("js/SignOn.js")}}"></script>
+
 {% end %}
 {% block body %}
     <form class="pure-form pure-g" method="POST">
@@ -12,8 +19,9 @@
             {% raw xsrf_form_html() %}
             <h2>欢迎注册</h2>
             <div class="pure-group pure-input-1">
-                <label>用 户 名</label>
-                <input type="text" class="pure-input-1" placeholder="您的账户名和登录名" id="username">
+                <label>
+                    用 户 名<input type="text" class="pure-input-1" placeholder="您的账户名和登录名" id="username" oninput="inputing(event)" onporpertychange="inputing(event)" />
+                </label>
             </div>
             <div class="pure-group pure-input-1">
                 <label>
